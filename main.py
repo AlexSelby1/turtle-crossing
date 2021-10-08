@@ -30,9 +30,14 @@ while game_is_on:
             game_is_on = False
             scoreboard.game_over()
         
+ 
+    # If player passes the line
+    if player.ycor() >= 280:
+        scoreboard.increase_score()
+        player.reset_pos()
+        car_manager.level_up()
         
-    
-
+        
 screen.exitonclick()
             
     
